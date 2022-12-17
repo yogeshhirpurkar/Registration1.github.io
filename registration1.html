@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>REGISTRATION FORM</title>
+  <script type="text/javascript">
+    function validation(){
+      var first = document.getElementById('Fname').value
+      var last = document.getElementById('Lname').value
+      var Add = document.getElementById('Address1').value
+      var email = document.getElementById('Email3').value
+      var MN = document.getElementById('Mnumber').value
+      flag = 1;
+
+      if(first == ""){
+    alert(document.getElementById('Fname').innerHTML ="Please fill the name");
+    flag = 0;;
+  }
+  else if(!isNaN(first)){
+    alert(document.getElementById('Fname').innerHTML ="Only alphabates are allowed");
+    flag = 0;;
+  }
+  else{
+    alert(document.getElementById('Fname').innerHTML =" Name is Correct");
+
+  }
+  if(last == ""){
+    alert(document.getElementById('Lname').innerHTML ="Please fill the Last name");
+    flag = 0;;
+  }
+  else if(!isNaN(last)){
+    alert(document.getElementById('Lname').innerHTML ="Only alphabates are allowed");
+    flag = 0;;
+  }
+  else{
+    alert(document.getElementById('Lname').innerHTML =" Name is Correct");
+
+  }
+  if(Add == ""){
+    alert(document.getElementById('Address1').innerHTML ="Please fill the Address properly");
+    flag = 0;;
+  }
+  else if(!isNaN(Add)){
+    alert(document.getElementById('Address1').innerHTML ="Only alphabates are allowed");
+    flag = 0;;
+  }
+  else{
+    alert(document.getElementById('Address1').innerHTML =" Address is Correct");
+
+  }
+  if(email == ""){
+    alert(document.getElementById('Email3').innerHTML =" Please fill the email");
+    flag = 0;;
+  }
+  else if(email.indexOf('@') <= 0 ){
+    alert(document.getElementById('Email3').innerHTML =" @ Invalid Position");
+    flag = 0;;
+  }
+
+  else if((email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.')){
+    alert(document.getElementById('Email3').innerHTML =".(Dot) Invalid Position");
+    flag = 0;;
+  }
+  else{
+    alert(document.getElementById('Email3').innerHTML =" Accepted");
+
+  }
+  if(MN == ""){
+    alert(document.getElementById('Mnumber').innerHTML =" Please fill the mobile Number");
+    flag = 0;;
+  }
+  else if(isNaN(MN)){
+    alert(document.getElementById('Mnumber').innerHTML =" Write digits only not characters");
+    flag = 0;;
+  }
+  else if(MN.length!=13){
+    alert(document.getElementById('Mnumber').innerHTML =" Mobile Number must be 10 digits only");
+    flag = 0;;
+  }
+  else{
+    alert(document.getElementById('Mnumber').innerHTML =" Accepted");
+  }
+  if (flag==0) {
+    return false;
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="main">
+    <form action="yogesh.html" method="get" id="REGISTRATION" name="REGISTRATION" onsubmit="return validation()" >
+
+      <h1 style="text-align: center; padding: 20px;">Register Here</h1>
+      <label>First Name : </label>
+      <input type="text" name="Fname1" id="Fname" placeholder="Enter your First name" required >
+      <br>
+      <br>
+      <label>Last Name : </label>
+      <input type="text" name="Lname2" id="Lname" placeholder="Enter your last name" required>
+      <br>
+      <br>
+      <label>Address : </label>
+      <input type="text" name="Addrees"
+      id="Address1" placeholder="Enter your local Addrees" required>
+      <br>
+      <br>
+      <label>Email : </label>
+      <input type="Email" name="Email"
+      id="Email3" placeholder="Enter your Email-Id" required>
+      <br>
+      <br>
+      <label>Gender : </label>
+      <br>
+      &nbsp;&nbsp;&nbsp;
+      <input type="radio" name="gender" 
+      id="Male">
+      &nbsp;
+      <span id="male">Male</span>
+      &nbsp;&nbsp;&nbsp;
+      <input type="radio" name="gender"
+      id="Female">
+      &nbsp;
+      <span id="Female">Female</span>
+      &nbsp;&nbsp;&nbsp;
+      <input type="radio" name="gender"
+      id="Others">
+      &nbsp;
+      <span id="Others">Others</span>
+      <br>
+      <br>
+      <label>Mobile Number : </label>
+      <input type="text" name="mnumber"
+      id="Mnumber" value="+91" placeholder="Enter your Mobile Number" maxlength="10" required>
+      <br>
+      <br>
+      <input type="Submit" value="Submit"
+      name="submit" id="submit" onclick="return validation()">
+      <footer align="center">
+        <h3>&copy; Yogesh Hirpurkar | Department of Electrical Engineering | USN: EE20004 | S.B. Jain, Nagpur</h3>
+      </footer>
+    </form>
+  </div>
+
+<style type="text/css">  
+  *{
+  margin: 0;
+  padding: 0;
+}
+
+  h1{
+    text-align: center;
+    padding: 20px;
+    font-family: Times new roman;
+  }
+  body{
+  background: url("./4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+div.main{
+  width: 400px;
+  margin: 100px auto 0px auto;
+  text-align: center;
+}
+div.main{
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 50%;
+  font-size: 20px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+  color: white;
+
+}
+input#submit{
+  width: 200px;
+  padding: 7px;
+  font-family: Times new roman ;
+  background-color: orangered;
+  box-shadow: 1px 1px 5px;
+  margin-bottom: 20px;
+  color: white;
+  text-decoration: underline;
+}
+</style>
+</body>
+</html>
+
+
